@@ -7,5 +7,4 @@ Projenin son halinde şu geliştirmeler yapılmıştır:
   - Search tab'ine tıklandığında  input ile alakalı film veya diziler liste şeklinde ekrana getirilmektedir ve kullanıcı istediği filmin içerik bilgisi görüntüleyebilmektedir.
   - Database olarak IMDB'nin database i kullanılmıştır.
 
-
 NOT: APK BOYUTU 73 MB OLDUĞU İÇİN GİT'E YÜKLEYEMEDİM !
