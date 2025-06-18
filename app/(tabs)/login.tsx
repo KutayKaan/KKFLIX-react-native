@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState(""); // Başarı/hata mesajı için
+  const [message, setMessage] = useState("");
 
   const handleLogin = () => {
     if (email.trim() === "" || password.trim() === "") {
@@ -12,13 +14,21 @@ const Login = () => {
       return;
     }
 
-    if (email === "test@example.com" && password === "123456") {
-      setMessage("Login successful!");
-      // İstersen burada email, password temizlenebilir:
-      // setEmail(""); setPassword("");
-    } else {
-      setMessage("Invalid email or password");
-    }
+    signInWithEmailAndPassword(auth, email.trim(), password)
+      .then(() => {
+        setMessage("Login successful!");
+      })
+      .catch((error) => {
+        if (error.code === "auth/user-not-found") {
+          setMessage("User not found.");
+        } else if (error.code === "auth/wrong-password") {
+          setMessage("Wrong password.");
+        } else if (error.code === "auth/invalid-email") {
+          setMessage("Invalid email format.");
+        } else {
+          setMessage("Login failed. Try again.");
+        }
+      });
   };
 
   return (
