@@ -5,4 +5,9 @@ Projenin son halinde şu geliştirmeler yapılmıştır:
   - Ana ekranda yer alan en çok izlenen filmler ve popüler olan bazı filmlerin listesi gösterilmektedir.
   - Kullanıcılar istedikleri filme tıklayarak detay bilgisini (tarih, konu, imdb, yönetmen ve oyuncular) görüntüleyebilmektedir. 
   - Search tab'ine tıklandığında  input ile alakalı film veya diziler liste şeklinde ekrana getirilmektedir ve kullanıcı istediği filmin içerik bilgisi görüntüleyebilmektedir.
+ - Online bir Veritabanı FIREBASE kullandım login kısmı için.
   - Database olarak IMDB'nin database i kullanılmıştır.
+
+NOT: APK LİNKİNİ BURAYA VE PDF DOSYAMA EKLEDİM.
+NOT: APK BOYUTU 73 MB OLDUĞU İÇİN GİT'E YÜKLEYEMEDİM !
+NOT: Video Linki -> https://drive.google.com/file/d/1pS2X5_fyyVCy2AZJnMq2UPAy5WyOBk4q/view?usp=drive_link
